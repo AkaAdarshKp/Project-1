@@ -1,1 +1,49 @@
+#include<stdio.h>
+int main()
+{
+    int choice,num,count=0,i;
 
+    printf("************************\n");
+    printf("     NUMBER DETAILS\n");
+    printf("************************\n");
+    printf("Enter A number To find\n");
+    printf("1. Even or Odd\n");
+    printf("2. Number of Digits\n");
+    printf("3. Multiplication table\n");
+    
+    printf("Enter your choice: ");
+    scanf("%d",&choice);
+
+    if(choice==1)
+    {
+        printf("Enter an integer: ");
+        scanf("%d", &num);
+        if(num % 2 == 0)
+            printf("%d Is Even.", num);
+        else;
+            printf("%d Is Odd.", num);
+        return 0;
+    }
+    else if(choice==2)
+    {
+        printf("Enter a number: ");
+        scanf("%d",&num);
+        while (num!=0)
+        {
+            count++;
+            num /= 10;
+        }
+        printf("Number Of Digits = %d \n",count);
+        return 0;
+    }
+    else if(choice==3)
+    {
+        printf("Enter a number: ");
+        scanf("%d",&num);
+        for(i=1;i<=10;i++)
+        {
+        printf(" %d * %d = %d\n", num, i, num*i);
+        }
+        return 0;
+    }
+}
